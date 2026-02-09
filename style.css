@@ -93,6 +93,7 @@ header nav {
 
 header nav a {
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 header nav a:hover {
@@ -230,6 +231,45 @@ header nav a:hover {
     margin: 15px 20px 20px;
     text-align: center;
     padding: 10px;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.menu-mobile a {
+    font-weight: 600;
+    color: #333;
+    font-size: 18px;
+}
+
+.menu-mobile a:hover {
+    color: var(--primary);
 }
 
 .sobre {
@@ -408,5 +448,19 @@ footer .copy {
     footer {
         grid-template-columns: 1fr;
         padding: 40px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-mobile.active {
+        display: flex;
     }
 }
