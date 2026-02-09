@@ -264,7 +264,6 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
 }
 
 .cta {
@@ -297,4 +296,117 @@ footer {
 footer .copy {
     grid-column: 1/-1;
     text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero img {
+        height: 250px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardapio h2 {
+        font-size: 32px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .cardapio h2 {
+        font-size: 28px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre {
+        padding: 40px 5%;
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .menu-grid li {
+        padding: 10px;
+    }
+
+    .menu-grid h3 {
+        font-size: 18px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
 }
